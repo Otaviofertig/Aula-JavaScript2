@@ -1,27 +1,16 @@
 
+const carros = ["Uno", "Escort", "Gol"]
 
-function efetuarOperacao () {
-    let  num1 = parseFloat(document.getElementById("num1").value);
-    let  num2 = parseFloat(document.getElementById("num2").value);
-    let  operador = parseFloat(document.getElementById("operador").value);
-    let resultado;
+const conteudo = document.getElementById("conteudo");
 
-    switch(operador) {
-        case"+":
-        resultado = num1 + num2;
-        break;
-        case"-":
-        resultado = num1 - num2;
-        break;
-        case"*":
-        resultado = num1 * num2;
-        break;
-        case"/":
-        resultado = num1 / num2;
-        break;
-        default:
-            resultado = "Operaddor Inválido!!!"
-    }
-
-    document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+let dados ="";
+let i = 0;
+while(i < 4) 
+{
+    dados += "<p>" + carros[i] +  "<//p>";
+    i++;
 }
+
+const secao = document.createElement("div");
+secao.innerHTML = "<h2>Loop While</h2>"+dados;
+conteudo.appendChild(secao);
