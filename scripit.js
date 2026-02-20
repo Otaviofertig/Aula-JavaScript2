@@ -1,32 +1,25 @@
 
-const carros = ["Uno", "Escort", "Gol"]
-
-const conteudo = document.getElementById("conteudo");
-
-function criaSecao(titulo,dadosf) {
-    let secao = document.createElement("div");
-secao.innerHTML = "<h2>Loop While</h2>"+dados;
-conteudo.appendChild(secao);
+function mostraSaudacao() {
+    const nome = document.getElementById("nome").value;
+    const hora = parseInt(document.getElementById("hora").value);
+    const mensagem = document.getElementById('mensagem');
+    mensagem.innerHTML = "Teste";
 }
 
-
-
-let dados ="";
-let i = 0;
-while(i < 4) 
-{
-    dados += "<p>" + carros[i] +  "<//p>";
-    i++;
-}
-
-criaSecao("Loop While", dados);
-
-criaSecao("Loop While 2", dados2)
-
-let dados2 ="";
-let i2 = 0;
-while(i2 < carros.length) 
-{
-    dados2 += "<p>" + carros[i2] +  "<//p>";
-    i2++;
+function saudacaoPersonalizada (nome,hora) {
+    if(hora < 12)
+    {
+        return"Bomdia, " + nome + "!";
+    }
+    else if(hora > 12&& hora < 18)
+    {
+        return "Boa tarde, " + nome + "!";
+    }
+    else if(hora > 18)
+    {
+        return "Boa noite, " + nome + "!";
+    }
+    else{
+        return"";
+    }
 }
