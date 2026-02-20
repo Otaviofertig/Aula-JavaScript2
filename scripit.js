@@ -3,7 +3,10 @@ function mostraSaudacao() {
     const nome = document.getElementById("nome").value;
     const hora = parseInt(document.getElementById("hora").value);
     const mensagem = document.getElementById('mensagem');
-    mensagem.innerHTML = "Teste";
+   
+    const resultado = saudacaoPersonalizada(nome, hora);
+
+    mensagem.innerHTML = resultado;
 }
 
 function saudacaoPersonalizada (nome,hora) {
